@@ -23,11 +23,15 @@ RUN yarn global add nodemon \
     bower \
     webpack \
     webpack-cli \
-    webpack-dev-server
+    webpack-dev-server \
+    babel-cli \
+    es-checker
 
 
 
 
 # Commands when creating a new container
 USER node
+RUN pm2 install pm2-intercom
+
 CMD ["node","-v"]
